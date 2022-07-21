@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Number Crunch Solver</title>
+    <link href="Content.css" rel="stylesheet" />
+    <script src="js/Extensions.js"></script>
+    <script src="js/Solver.js"></script>
+</head>
+<body>
+    <h1>Number Crunch Solver</h1>
+    <form>
+        <div class="grid-container">
+            <div class="grid">
+                <!-- ROW 1 -->
+                <label is="lbl-solution" id="lblNum1"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign1" name="equ1sign1"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum2"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign2" name="equ1sign2"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum3"></label>
+                <input is="txt-answer" id="txtAnswer1" />
+
+                <!-- ROW 2 -->
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign3" name="equ4sign1"></select>
+                </div>
+                <div class="grid-item blank-middle"></div>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign4" name="equ5sign1"></select>
+                </div>
+                <div class="grid-item blank-middle"></div>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign5" name="equ6sign1"></select>
+                </div>
+                <div class="grid-item blank-right"></div>
+
+                <!-- ROW 3 -->
+                <label is="lbl-solution" id="lblNum4"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign6" name="equ2sign1"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum5"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign7" name="equ2sign2"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum6"></label>
+                <input is="txt-answer" id="txtAnswer2" />
+
+                <!-- ROW 4 -->
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign8" name="equ4sign2"></select>
+                </div>
+                <div class="grid-item blank-middle"></div>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign9" name="equ5sign2"></select>
+                </div>
+                <div class="grid-item blank-middle"></div>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign10" name="equ6sign2"></select>
+                </div>
+                <div class="grid-item blank-right"></div>
+
+                <!-- ROW 5 -->
+                <label is="lbl-solution" id="lblNum7"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign11" name="equ3sign1"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum8"></label>
+                <div class="grid-item">
+                    <select is="select-sign" id="selSign12" name="equ3sign2"></select>
+                </div>
+                <label is="lbl-solution" id="lblNum9"></label>
+                <input is="txt-answer" id="txtAnswer3" />
+
+                <!-- ROW 6 -->
+                <input is="txt-answer" id="txtAnswer4" />
+                <div class="grid-item blank-bottom"></div>
+                <input is="txt-answer" id="txtAnswer5" />
+                <div class="grid-item blank-bottom"></div>
+                <input is="txt-answer" id="txtAnswer6" />
+                <div class="grid-item blank-bottom blank-right"></div>
+            </div>
+        </div>
+        <div style="margin: 50px; text-align: center;">
+            <input type="submit" id="btnSolve" class="btn-solve" value="Solve" onclick="return solve()" />
+        </div>
+    </form>
+</body>
+</html>

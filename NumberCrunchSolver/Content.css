@@ -1,0 +1,99 @@
+﻿body {
+    background-color: dimgrey;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+option {
+    font-size: 30px;
+}
+
+/* GRID */
+.grid-container {
+    background-color: dimgrey;
+    width: fit-content;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    /*background-color: rgba(255, 255, 255, 1);*/
+    width: max-content;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.blank-right {
+    background-color: rgba(255, 255, 255, 0);
+    border-right: none;
+}
+
+.blank-bottom {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: none
+}
+
+.blank-middle {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* TEXTBOX*/
+
+.txt-answer {
+    background-color: rgba(255, 255, 255, 0.9);
+    ;
+    border-radius: 5px;
+}
+
+/* BUTTON */
+
+.btn-solve {
+    color: rgb(0,100,0);
+    padding: 10px;
+    cursor: pointer;
+    font: bold 30px arial;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+}
+
+    .btn-solve:hover {
+        background-color: rgb(0,100,0);
+        color: white;
+    }
+
+    .btn-solve:active {
+        background-color: rgb(0,70,0);
+        border-color: rgb(0,70,0);
+        transform: translateY(2px);
+    }
+
+/* LABEL */
+
+.lbl-solution {
+    background-color: rgba(255, 255, 255, 0.3);
+}
