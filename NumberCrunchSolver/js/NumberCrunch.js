@@ -70,7 +70,7 @@
 
     }
 
-    containsDuplicate(equationIndex, posSolution, ...numberVariables) {
+    static containsDuplicate(equationIndex, posSolution, ...numberVariables) {
 
         if (equationIndex <= 2) {
             numberVariables.splice(equationIndex * 3, 3, ...posSolution);

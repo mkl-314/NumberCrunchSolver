@@ -35,6 +35,7 @@ loadScript('/js/Solver.js');
 loadScript('/js/Equations.js');
 loadScript('/js/Types.js');
 loadScript('/js/NumberCrunch.js');
+loadScript('/js/Saver.js');
 
 function loadScript(url) {
     var head = document.getElementsByTagName('head')[0];

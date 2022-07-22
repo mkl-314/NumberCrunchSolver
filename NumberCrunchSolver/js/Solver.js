@@ -25,7 +25,7 @@ function getHTMLValues() {
         signs.push(selOperation.options[selOperation.selectedIndex].value);
     }
 
-    return { answers: answers, signs: signs };
+    return { answers: answers, operations: signs };
 }
 
 function getEquations(htmlValues) {
@@ -36,8 +36,8 @@ function getEquations(htmlValues) {
         equations.push(
             new Equation(
                 i,
-                htmlValues.signs[i * 2],
-                htmlValues.signs[i * 2 + 1],
+                htmlValues.operations[i * 2],
+                htmlValues.operations[i * 2 + 1],
                 htmlValues.answers[i])
         );
     }
@@ -92,7 +92,7 @@ function calculate(equations) {
 }
 
 function backtrackingSearch(equations) {
-    return recursiveBacktracking(new Array(9).fill(0), equations, ...equations.map(x => x.possibleSolutions));
+    return recursiveBacktracking(new Array(9).fill(0), equations, equations.map(x => x.possibleSolutions));
 }
 
 function recursiveBacktracking(numberVariables, equations, allPossibleSolutions) {
