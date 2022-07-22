@@ -1,6 +1,6 @@
 ﻿class Equation {
 
-    validSolutions = [];
+    possibleSolutions = [];
 
     constructor(id, operation1, operation2, answer) {
         this.id = id;
@@ -17,7 +17,7 @@
                 for (var k = 1; k <= 9; k++) {
                     if (i === k || j === k) continue;
                     if (this.isValidSolution(i, j, k)) {
-                        this.validSolutions.push((i, j, k));
+                        this.possibleSolutions.push([i, j, k]);
                     }
                 }
             }
@@ -42,29 +42,13 @@
         } else {
             lhs = PerformOperation(i, lhs, this.operation1);
         }
-        return lhs === this.answer;
+        return lhs == this.answer;
 
     }
 }
 
-//function Plus(a, b) {
-//    return a + b;
-//}
-
-//function Minus(a, b) {
-//    return a - b;
-//}
-
-//function Times(a, b) {
-//    return a * b;
-//}
-
-//function Divide(a, b) {
-//    return a / b;
-//}
-
 function PerformOperation(a, b, operation) {
-    switch (operation) {
+    switch (parseInt(operation, 10)) {
         case Operation.Divide:
             return a / b;
         case Operation.Times:

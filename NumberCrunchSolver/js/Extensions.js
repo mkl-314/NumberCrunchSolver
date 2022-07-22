@@ -4,8 +4,6 @@
         this.min = "0";
         this.max = "100";
         this.classList.add('grid-item', 'txt-answer');
-        //this.classList.add("grid-item");
-        //this.style.color = "pink";
     }
 }
 
@@ -32,3 +30,15 @@ class NumberSolution extends HTMLLabelElement {
 }
 
 customElements.define('lbl-solution', NumberSolution, { extends: 'label' });
+
+loadScript('/js/Solver.js');
+loadScript('/js/Equations.js');
+loadScript('/js/Types.js');
+
+function loadScript(url) {
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    head.appendChild(script);
+}

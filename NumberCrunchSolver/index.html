@@ -5,7 +5,8 @@
     <title>Number Crunch Solver</title>
     <link href="Content.css" rel="stylesheet" />
     <script src="js/Extensions.js"></script>
-    <script src="js/Solver.js"></script>
+    <!--<script src="js/Solver.js"></script>-->
+    <!--<script src="js/Equations.js"></script>-->
 </head>
 <body>
     <h1>Number Crunch Solver</h1>
@@ -26,33 +27,33 @@
 
                 <!-- ROW 2 -->
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign3" name="equ4sign1"></select>
+                    <select is="select-sign" id="selSign6" name="equ4sign1"></select>
                 </div>
                 <div class="grid-item blank-middle"></div>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign4" name="equ5sign1"></select>
+                    <select is="select-sign" id="selSign8" name="equ5sign1"></select>
                 </div>
                 <div class="grid-item blank-middle"></div>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign5" name="equ6sign1"></select>
+                    <select is="select-sign" id="selSign10" name="equ6sign1"></select>
                 </div>
                 <div class="grid-item blank-right"></div>
 
                 <!-- ROW 3 -->
                 <label is="lbl-solution" id="lblNum4"></label>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign6" name="equ2sign1"></select>
+                    <select is="select-sign" id="selSign3" name="equ2sign1"></select>
                 </div>
                 <label is="lbl-solution" id="lblNum5"></label>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign7" name="equ2sign2"></select>
+                    <select is="select-sign" id="selSign4" name="equ2sign2"></select>
                 </div>
                 <label is="lbl-solution" id="lblNum6"></label>
                 <input is="txt-answer" id="txtAnswer2" />
 
                 <!-- ROW 4 -->
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign8" name="equ4sign2"></select>
+                    <select is="select-sign" id="selSign7" name="equ4sign2"></select>
                 </div>
                 <div class="grid-item blank-middle"></div>
                 <div class="grid-item">
@@ -60,18 +61,18 @@
                 </div>
                 <div class="grid-item blank-middle"></div>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign10" name="equ6sign2"></select>
+                    <select is="select-sign" id="selSign11" name="equ6sign2"></select>
                 </div>
                 <div class="grid-item blank-right"></div>
 
                 <!-- ROW 5 -->
                 <label is="lbl-solution" id="lblNum7"></label>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign11" name="equ3sign1"></select>
+                    <select is="select-sign" id="selSign5" name="equ3sign1"></select>
                 </div>
                 <label is="lbl-solution" id="lblNum8"></label>
                 <div class="grid-item">
-                    <select is="select-sign" id="selSign12" name="equ3sign2"></select>
+                    <select is="select-sign" id="selSign6" name="equ3sign2"></select>
                 </div>
                 <label is="lbl-solution" id="lblNum9"></label>
                 <input is="txt-answer" id="txtAnswer3" />
@@ -88,6 +89,7 @@
         <div style="margin: 50px; text-align: center;">
             <input type="submit" id="btnSolve" class="btn-solve" value="Solve" onclick="return solve()" />
         </div>
+        <p id="posSols"></p>
     </form>
 </body>
 </html>
