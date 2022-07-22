@@ -68,17 +68,26 @@ function calculate(equations) {
 
     }
 
-    for (let equation of equations) {
-        if (equation.id >= 3) break;
-
-        if (equation.id == 0) {
-            for (let possibleSol of equation.possibleSolutions) {
-                if (!equations[4].possibleSolutions.some(x => x[0] == possibleSol[0])) {
-
-                }
-            }
-        }
+    var solution = backtrackingSearch(equations);
+    if (solution.length == 0) {
+        console.log("No solution");
+    } else {
+        console.log(solution.toString());
     }
+
+    return solution;
+
+    //for (let equation of equations) {
+    //    if (equation.id >= 3) break;
+
+    //    if (equation.id == 0) {
+    //        for (let possibleSol of equation.possibleSolutions) {
+    //            if (!equations[4].possibleSolutions.some(x => x[0] == possibleSol[0])) {
+
+    //            }
+    //        }
+    //    }
+    //}
 
 }
 
