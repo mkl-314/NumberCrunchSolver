@@ -1,29 +1,15 @@
 ﻿function save() {
     let htmlValues = getHTMLValues();
-
-    
-
-    const fileElement = document.createElement("fileElement");
     var data = JSON.stringify(htmlValues, null, 2);
-    console.log(JSON.stringify(htmlValues, null, 2).toString());
 
     //localStorage.setItem(new Date().toString(), data);
-    localStorage.setItem("test", data);
-
-
-    <!--fileElement.href = URL.createObjectURL(new Blob([JSON.stringify(htmlValues, null, 2)], {
-        type: "application/json"
-    }));
-    fileElement.setAttribute("download", "data.json");
-    document.body.appendChild(fileElement);
-    fileElement.click();
-    document.body.removeChild(fileElement-->);
+    localStorage.setItem("data", data);
 
     return false;
 }
 
 function load() {
-    var data = localStorage.getItem("test");
+    var data = localStorage.getItem("data");
     var htmlValues = JSON.parse(data);
 
     for (var i = 1; i <= 6; i++) {
@@ -35,4 +21,22 @@ function load() {
         var selOperation = document.getElementById("selSign" + i);
         selOperation.selectedIndex = htmlValues.operations[i-1];
     }
+}
+
+function getHTMLValues() {
+
+    let answers = [];
+    let signs = [];
+
+    for (var i = 1; i <= 6; i++) {
+        var txtAnswer = document.getElementById("txtAnswer" + i);
+        answers.push(txtAnswer.value);
+    }
+
+    for (var i = 1; i <= 12; i++) {
+        var selOperation = document.getElementById("selSign" + i);
+        signs.push(selOperation.options[selOperation.selectedIndex].value);
+    }
+
+    return { answers: answers, operations: signs };
 }
