@@ -1,7 +1,6 @@
 ﻿loadScript('/js/Solver.js');
 loadScript('/js/Equations.js');
 loadScript('/js/Types.js');
-loadScript('/js/NumberCrunch.js');
 loadScript('/js/Storage.js');
 loadScript('/js/Extensions.js');
 

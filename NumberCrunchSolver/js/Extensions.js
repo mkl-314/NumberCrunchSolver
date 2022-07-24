@@ -11,12 +11,14 @@ customElements.define('txt-answer', Answer, { extends: 'input' });
 
 class Sign extends HTMLSelectElement {
     connectedCallback() {
-        var signs = ['+', '-', 'x', '/']
-        for (var i = 0; i < 4; i++) {
-            var opt = document.createElement('option');
-            opt.value = i;
-            opt.innerHTML = signs[i];
-            this.appendChild(opt);
+        if (this.childElementCount == 0) {
+            const signs = ['+', '-', 'x', '/'];
+            for (let i = 0; i < 4; i++) {
+                var opt = document.createElement('option');
+                opt.value = i;
+                opt.innerHTML = signs[i];
+                this.appendChild(opt);
+            }
         }
     }
 }
